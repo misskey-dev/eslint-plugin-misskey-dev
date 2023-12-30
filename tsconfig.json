@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "types": ["node"]
+    },
+    "include": ["**/*.js", ".eslintrc.js"]
+}
