@@ -12,7 +12,7 @@ npm install --save-dev eslint @misskey-dev/eslint-plugin @typescript-eslint/esli
 
 ## Usage
 
-Create `.eslintrc.cjs` file and write as follows:
+Create `.eslintrc.cjs` file and write as follows
 
 ```javascript:.eslintrc.cjs
 module.exports = {
