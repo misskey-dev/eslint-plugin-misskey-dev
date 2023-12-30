@@ -21,7 +21,7 @@ module.exports = {
 		tsconfigRootDir: __dirname,
 		project: ['./tsconfig.json'],
 	},
-    ignorePatterns: ['**/.eslintrc.cjs'],
+	ignorePatterns: ['**/.eslintrc.cjs'],
 	extends: [
 		'plugin:@misskey-dev/recommended',
 	],
