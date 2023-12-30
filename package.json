@@ -1,6 +1,6 @@
 {
   "name": "@misskey-dev/eslint-plugin",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "An ESLint plugin designed for Misskey developers",
   "author": "syuilo <syuilotan@yahoo.co.jp>",
   "license": "MIT",
@@ -13,7 +13,7 @@
   },
   "files": [
     "index.js",
-    "recommended.js"
+    "configs"
   ],
   "keywords": ["eslint", "eslintplugin", "misskey"],
   "peerDependencies": {
