@@ -1,6 +1,6 @@
 {
   "name": "@misskey-dev/eslint-plugin",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "An ESLint plugin designed for Misskey developers",
   "author": "syuilo <syuilotan@yahoo.co.jp>",
   "license": "MIT",
