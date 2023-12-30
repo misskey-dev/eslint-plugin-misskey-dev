@@ -1,7 +1,8 @@
 {
     "compilerOptions": {
         "allowJs": true,
+        "strictNullChecks": true,
         "types": ["node"]
     },
-    "include": ["**/*.js", ".eslintrc.js"]
+    "include": ["**/*.js", "**/*.ts", ".eslintrc.js"]
 }
