@@ -1,12 +1,15 @@
 import recommended from './configs/recommended.js';
-// import packageConfig from './package.json' with { type: 'json' };
+
+/**
+ * TODO: Import Attributes にしたいけど VS Code の環境によってはエラーになるので今のところ保留
+ * @see https://github.com/microsoft/vscode-eslint/issues/1848
+ */
+import packageConfig from './package.json' assert { type: 'json' };
 
 const plugin = {
 	meta: {
-		// name: packageConfig.name,
-		// version: packageConfig.version,
-		name: '@misskey-dev/eslint-plugin',
-		version: '1.0.0',
+		name: packageConfig.name,
+		version: packageConfig.version,
 	},
 	configs: {
 		recommended,
