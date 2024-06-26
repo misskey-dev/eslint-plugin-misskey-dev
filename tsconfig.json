@@ -4,5 +4,5 @@
         "strictNullChecks": true,
         "types": ["node"]
     },
-    "include": ["**/*.js", "**/*.ts", ".eslintrc.js"]
+    "include": ["**/*.ts"]
 }

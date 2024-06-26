@@ -7,36 +7,52 @@
 First, install the plugin using npm.
 
 ```bash
-npm install --save-dev eslint @misskey-dev/eslint-plugin @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-import
+npm install --save-dev eslint @misskey-dev/eslint-plugin @typescript-eslint/parser
 ```
 
 ## Usage
 
-Create `.eslintrc.cjs` file and write as follows
+Create `eslint.config.js` file and write as follows
 
-```javascript:.eslintrc.cjs
-module.exports = {
-	root: true,
-	parserOptions: {
-		tsconfigRootDir: __dirname,
-		project: ['./tsconfig.json'],
+```javascript:eslint.config.js
+import pluginMisskey from '@misskey-dev/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
+
+export default [
+	...pluginMisskey.configs['recommended'],
+	{
+		files: ['**/*.js', '**/*.jsx'],
+		languageOptions: {
+			parserOptions: {
+				ecmaVersion: 'latest',
+				sourceType: 'module',
+			},
+		},
 	},
-	ignorePatterns: ['**/.eslintrc.cjs'],
-	extends: [
-		'plugin:@misskey-dev/recommended',
-	],
-};
+	{
+		files: ['**/*.ts', '**/*.tsx'],
+		languageOptions: {
+			parserOptions: {
+				ecmaVersion: 'latest',
+				parser: tsParser,
+				project: ['./tsconfig.json'],
+				sourceType: 'module',
+				tsconfigRootDir: import.meta.dirname,
+			},
+		},
+	},
+];
 ```
 
 In tsconfig, strictNullChecks must be true.
 
 ```json:tsconfig.json
 {
-    "compilerOptions": {
-        ...
-        "strictNullChecks": true,
-        ...
-    },
+	"compilerOptions": {
+		// ...
+		"strictNullChecks": true,
+		// ...
+	},
 }
 ```
 
@@ -44,9 +60,9 @@ Add the eslint task to `package.json`
 
 ```json:package.json
 {
-  "scripts": {
-    "eslint": "eslint . --ext .js,.jsx,.ts,.tsx"
-  },
+	"scripts": {
+		"eslint": "eslint './**/*.{js,jsx,ts,tsx}'"
+	},
 }
 ```
 
