@@ -1,5 +1,5 @@
 import typescriptEslint from '@typescript-eslint/eslint-plugin';
-import stylisticEslint from '@stylistic/eslint-plugin'
+import stylisticEslint from '@stylistic/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 import { fixupPluginRules } from '@eslint/compat';
 import _import from 'eslint-plugin-import';
