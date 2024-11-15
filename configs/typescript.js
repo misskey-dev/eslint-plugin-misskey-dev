@@ -1,4 +1,5 @@
 import typescriptEslint from '@typescript-eslint/eslint-plugin';
+import stylisticEslint from '@stylistic/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 import { fixupPluginRules } from '@eslint/compat';
 import _import from 'eslint-plugin-import';
@@ -14,7 +15,8 @@ const tsRules = {
 		}],
 	}],
 	*/
-	'@typescript-eslint/func-call-spacing': ['error', 'never'],
+	'@stylistic/function-call-spacing': ['error', 'never'],
+	//	'@typescript-eslint/func-call-spacing': ['error', 'never'],
 	'@typescript-eslint/no-explicit-any': ['warn'],
 	'@typescript-eslint/no-unused-vars': ['warn'],
 	'@typescript-eslint/no-unnecessary-condition': ['warn'],
@@ -46,6 +48,7 @@ const tsRules = {
 export default {
 	plugins: {
 		'@typescript-eslint': fixupPluginRules(typescriptEslint),
+		'@stylistic': fixupPluginRules(stylisticEslint),
 		import: fixupPluginRules(_import),
 	},
 	languageOptions: {
