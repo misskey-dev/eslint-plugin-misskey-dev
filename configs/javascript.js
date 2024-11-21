@@ -10,7 +10,6 @@ const jsRules = {
 	}],
 	*/
 	'eqeqeq': ['error', 'always', { 'null': 'ignore' }],
-	'no-multi-spaces': ['error'],
 	'no-var': ['error'],
 	'prefer-arrow-callback': ['error'],
 	'no-throw-literal': ['error'],
@@ -57,6 +56,7 @@ const jsRules = {
 		'ObjectExpression': 'first',
 	}],
 	'@stylistic/lines-between-class-members': 'off',
+	'@stylistic/no-multi-spaces': ['error'],
 	'@stylistic/no-multiple-empty-lines': ['error', { 'max': 1 }],
 	'@stylistic/object-curly-spacing': ['error', 'always'],
 	'@stylistic/padded-blocks': ['error', 'never'],
