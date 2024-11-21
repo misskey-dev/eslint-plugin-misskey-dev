@@ -12,6 +12,9 @@ export default [
 				sourceType: 'module',
 			},
 		},
+		rules: {
+			'import/no-default-export': ['off'],
+		},
 	},
 	{
 		files: ['**/*.ts', '**/*.tsx'],
