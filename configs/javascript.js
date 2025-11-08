@@ -1,4 +1,3 @@
-import { fixupPluginRules } from '@eslint/compat';
 import stylisticEslint from '@stylistic/eslint-plugin';
 import _import from 'eslint-plugin-import';
 
@@ -76,8 +75,8 @@ const jsRules = {
 
 export default {
 	plugins: {
-		'@stylistic': fixupPluginRules(stylisticEslint),
-		import: fixupPluginRules(_import),
+		'@stylistic': stylisticEslint,
+		import: _import,
 	},
 	settings: {
 		/** @see https://github.com/import-js/eslint-plugin-import/issues/2556#issuecomment-1419518561 */
