@@ -1,7 +1,6 @@
 import typescriptEslint from '@typescript-eslint/eslint-plugin';
 import stylisticEslint from '@stylistic/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
-import { fixupPluginRules } from '@eslint/compat';
 import _import from 'eslint-plugin-import';
 import javascript from './javascript.js';
 
@@ -47,9 +46,9 @@ const tsRules = {
 
 export default {
 	plugins: {
-		'@typescript-eslint': fixupPluginRules(typescriptEslint),
-		'@stylistic': fixupPluginRules(stylisticEslint),
-		import: fixupPluginRules(_import),
+		'@typescript-eslint': typescriptEslint,
+		'@stylistic': stylisticEslint,
+		import: _import,
 	},
 	languageOptions: {
 		parser: tsParser,
